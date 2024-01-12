@@ -1,16 +1,13 @@
 //
-//  ProfileView.swift
+//  CurrentUserProfileView.swift
 //  Instagram
 //
-//  Created by Paweł Rudnik on 11/01/2024.
+//  Created by Paweł Rudnik on 12/01/2024.
 //
 
 import SwiftUI
 
-struct ProfileView: View {
-    
-    let user: User
-    
+struct CurrentUserProfileView: View {
     
     private let gridItems: [GridItem] = [
         .init(.flexible(), spacing: 1),
@@ -19,14 +16,14 @@ struct ProfileView: View {
     ]
     
     var body: some View {
-        //NavigationStack {
+        NavigationStack {
             ScrollView {
                 VStack {
                     // Header:
                     VStack(spacing: 10) {
                         // profile picture and stats
                         HStack {
-                            Image(user.profileImageURl ?? "image-placeholder")
+                            Image("michael-scott")
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 80, height: 80)
@@ -45,19 +42,12 @@ struct ProfileView: View {
                         
                         // name and bio
                         VStack(alignment: .leading, spacing: 4) {
+                            Text("Name Surname")
+                                .font(.footnote)
+                                .fontWeight(.semibold)
                             
-                            // if let instead of ' ?? ' to avoid blank spaces under the photo
-                            
-                            if let fullname = user.fullname {
-                                Text(fullname)
-                                    .font(.footnote)
-                                    .fontWeight(.semibold)
-                            }
-                            
-                            if let bio = user.bio{
-                                Text(bio)
-                                    .font(.footnote)
-                            }
+                            Text("Bio will be here")
+                                .font(.footnote)
                         }
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding(.horizontal)
@@ -94,11 +84,20 @@ struct ProfileView: View {
             }
             .navigationTitle("Profile")
             .navigationBarTitleDisplayMode(.inline)
-        //}
-        
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        
+                    } label: {
+                        Image(systemName: "line.3.horizontal")
+                            .tint(.black)
+                    }
+                }
+        }
+        }
     }
 }
 
 #Preview {
-    ProfileView(user: User.MOCK_USERS[2])
+    CurrentUserProfileView()
 }

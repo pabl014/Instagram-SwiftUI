@@ -15,25 +15,28 @@ struct SearchView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 20) {
-                    ForEach(0 ... 15, id: \.self) { user in
-                        HStack {
-                            Image("michael-shock")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 40, height: 40)
-                                .clipShape(Circle())
-                            
-                            VStack(alignment: .leading) {
-                                Text("michaelscott123")
-                                    .fontWeight(.semibold)
+                    ForEach(User.MOCK_USERS) { user in
+                        NavigationLink(value: user) {
+                            HStack {
+                                Image(user.profileImageURl ?? "image-placeholder")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40, height: 40)
+                                    .clipShape(Circle())
                                 
-                                Text("Michael Scott")
+                                VStack(alignment: .leading) {
+                                    Text(user.username)
+                                        .fontWeight(.semibold)
+                                    
+                                    Text(user.fullname ?? "")
+                                }
+                                .font(.footnote)
+                                
+                                Spacer()
                             }
-                            .font(.footnote)
-                            
-                            Spacer()
+                            .foregroundStyle(.black)
+                            .padding(.horizontal)
                         }
-                        .padding(.horizontal)
                     }
                 }
                 .padding(.top, 8)
@@ -41,6 +44,9 @@ struct SearchView: View {
             }
             .navigationTitle("Explore")
             .navigationBarTitleDisplayMode(.inline)
+            .navigationDestination(for: User.self) { user in
+                ProfileView(user: user)
+            }
         }
     }
 }

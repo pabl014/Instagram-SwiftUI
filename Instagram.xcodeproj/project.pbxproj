@@ -22,6 +22,8 @@
 		FEDA1B582B50980700E688B1 /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B572B50980700E688B1 /* CreateUsernameView.swift */; };
 		FEDA1B5A2B509BA700E688B1 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B592B509BA700E688B1 /* PasswordView.swift */; };
 		FEDA1B5C2B509DC900E688B1 /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B5B2B509DC900E688B1 /* CompleteSignUpView.swift */; };
+		FEDA1B5E2B517F0000E688B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B5D2B517F0000E688B1 /* User.swift */; };
+		FEDA1B602B5195D800E688B1 /* CurrentUserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B5F2B5195D800E688B1 /* CurrentUserProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 		FEDA1B572B50980700E688B1 /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
 		FEDA1B592B509BA700E688B1 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
 		FEDA1B5B2B509DC900E688B1 /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
+		FEDA1B5D2B517F0000E688B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FEDA1B5F2B5195D800E688B1 /* CurrentUserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUserProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,7 @@
 		FEDA1B382B500C9400E688B1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FEDA1B5D2B517F0000E688B1 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				FEDA1B452B50118D00E688B1 /* ProfileView.swift */,
+				FEDA1B5F2B5195D800E688B1 /* CurrentUserProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -276,10 +282,12 @@
 			files = (
 				FEDA1B582B50980700E688B1 /* CreateUsernameView.swift in Sources */,
 				FEDA1B4C2B5030BB00E688B1 /* FeedView.swift in Sources */,
+				FEDA1B602B5195D800E688B1 /* CurrentUserProfileView.swift in Sources */,
 				FEDA1B462B50118D00E688B1 /* ProfileView.swift in Sources */,
 				FEDA1B2A2B500AB800E688B1 /* InstagramApp.swift in Sources */,
 				FEDA1B502B5060F900E688B1 /* SearchView.swift in Sources */,
 				FEDA1B4A2B501A9100E688B1 /* UserStatView.swift in Sources */,
+				FEDA1B5E2B517F0000E688B1 /* User.swift in Sources */,
 				FEDA1B442B500E0E00E688B1 /* MainTabView.swift in Sources */,
 				FEDA1B5A2B509BA700E688B1 /* PasswordView.swift in Sources */,
 				FEDA1B5C2B509DC900E688B1 /* CompleteSignUpView.swift in Sources */,
