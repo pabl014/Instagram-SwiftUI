@@ -8,28 +8,32 @@
 import SwiftUI
 
 struct FeedCell: View {
+    
+    var post: Post
+    
     var body: some View {
         VStack {
             
             // profile picture and name
             HStack {
-                Image("michael-shock")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 40, height: 40)
-                    .clipShape(Circle())
-                
-                Text("Michael Scott")
-                    .font(.footnote)
-                    .fontWeight(.semibold)
-                
+                if let user = post.user{
+                    Image(user.profileImageURl ?? "image-placeholder")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40, height: 40)
+                        .clipShape(Circle())
+                    
+                    Text(user.fullname ?? user.username)
+                        .font(.footnote)
+                        .fontWeight(.semibold)
+                }
                 Spacer()
             }
             .padding(.leading,8)
             
             // post image
             
-            Image("michael-shock")
+            Image(post.imageUrl)
                 .resizable()
                 .scaledToFit()
                 .frame(height: 400)
@@ -68,7 +72,7 @@ struct FeedCell: View {
             
             // number of likes
             
-            Text("23 likes")
+            Text("\(post.likes) likes")
                 .font(.footnote)
                 .fontWeight(.semibold)
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -78,9 +82,12 @@ struct FeedCell: View {
             // caption label
             
             HStack {
-                Text("Michael ")
-                    .fontWeight(.semibold)
-                + Text("This is some captions text for test. Blah blah blah. Blah blah blah. Blah blah blah.Blah blah blah.Blah blah blah.")
+                if let user = post.user {
+                    Text("\(user.fullname ?? user.username) ")
+                        .fontWeight(.semibold)
+                    + Text(post.caption)
+                }
+                
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .font(.footnote)
@@ -101,5 +108,5 @@ struct FeedCell: View {
 }
 
 #Preview {
-    FeedCell()
+    FeedCell(post: Post.MOCK_POSTS[2])
 }

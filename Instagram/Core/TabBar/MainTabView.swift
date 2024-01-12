@@ -19,7 +19,7 @@ struct MainTabView: View {
                 .tabItem { Image(systemName: "plus.app") }
             Text("Notifications")
                 .tabItem { Image(systemName: "heart.fill") }
-            CurrentUserProfileView()
+            CurrentUserProfileView(user: User.MOCK_USERS[1])
                 .tabItem { Image(systemName: "person.fill") }
         }
         .tint(.black)
