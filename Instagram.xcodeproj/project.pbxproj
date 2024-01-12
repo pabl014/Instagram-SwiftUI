@@ -16,6 +16,12 @@
 		FEDA1B4C2B5030BB00E688B1 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B4B2B5030BB00E688B1 /* FeedView.swift */; };
 		FEDA1B4E2B5030D800E688B1 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B4D2B5030D800E688B1 /* FeedCell.swift */; };
 		FEDA1B502B5060F900E688B1 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B4F2B5060F900E688B1 /* SearchView.swift */; };
+		FEDA1B522B506C9B00E688B1 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B512B506C9B00E688B1 /* LoginView.swift */; };
+		FEDA1B542B5084D800E688B1 /* AddEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B532B5084D800E688B1 /* AddEmailView.swift */; };
+		FEDA1B562B50955900E688B1 /* IGTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B552B50955900E688B1 /* IGTextFieldModifier.swift */; };
+		FEDA1B582B50980700E688B1 /* CreateUsernameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B572B50980700E688B1 /* CreateUsernameView.swift */; };
+		FEDA1B5A2B509BA700E688B1 /* PasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B592B509BA700E688B1 /* PasswordView.swift */; };
+		FEDA1B5C2B509DC900E688B1 /* CompleteSignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B5B2B509DC900E688B1 /* CompleteSignUpView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,12 @@
 		FEDA1B4B2B5030BB00E688B1 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		FEDA1B4D2B5030D800E688B1 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		FEDA1B4F2B5060F900E688B1 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		FEDA1B512B506C9B00E688B1 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FEDA1B532B5084D800E688B1 /* AddEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddEmailView.swift; sourceTree = "<group>"; };
+		FEDA1B552B50955900E688B1 /* IGTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGTextFieldModifier.swift; sourceTree = "<group>"; };
+		FEDA1B572B50980700E688B1 /* CreateUsernameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameView.swift; sourceTree = "<group>"; };
+		FEDA1B592B509BA700E688B1 /* PasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordView.swift; sourceTree = "<group>"; };
+		FEDA1B5B2B509DC900E688B1 /* CompleteSignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteSignUpView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +139,11 @@
 		FEDA1B3C2B500CE200E688B1 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				FEDA1B512B506C9B00E688B1 /* LoginView.swift */,
+				FEDA1B532B5084D800E688B1 /* AddEmailView.swift */,
+				FEDA1B572B50980700E688B1 /* CreateUsernameView.swift */,
+				FEDA1B592B509BA700E688B1 /* PasswordView.swift */,
+				FEDA1B5B2B509DC900E688B1 /* CompleteSignUpView.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -182,6 +199,7 @@
 			isa = PBXGroup;
 			children = (
 				FEDA1B492B501A9100E688B1 /* UserStatView.swift */,
+				FEDA1B552B50955900E688B1 /* IGTextFieldModifier.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -256,12 +274,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEDA1B582B50980700E688B1 /* CreateUsernameView.swift in Sources */,
 				FEDA1B4C2B5030BB00E688B1 /* FeedView.swift in Sources */,
 				FEDA1B462B50118D00E688B1 /* ProfileView.swift in Sources */,
 				FEDA1B2A2B500AB800E688B1 /* InstagramApp.swift in Sources */,
 				FEDA1B502B5060F900E688B1 /* SearchView.swift in Sources */,
 				FEDA1B4A2B501A9100E688B1 /* UserStatView.swift in Sources */,
 				FEDA1B442B500E0E00E688B1 /* MainTabView.swift in Sources */,
+				FEDA1B5A2B509BA700E688B1 /* PasswordView.swift in Sources */,
+				FEDA1B5C2B509DC900E688B1 /* CompleteSignUpView.swift in Sources */,
+				FEDA1B542B5084D800E688B1 /* AddEmailView.swift in Sources */,
+				FEDA1B522B506C9B00E688B1 /* LoginView.swift in Sources */,
+				FEDA1B562B50955900E688B1 /* IGTextFieldModifier.swift in Sources */,
 				FEDA1B4E2B5030D800E688B1 /* FeedCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
