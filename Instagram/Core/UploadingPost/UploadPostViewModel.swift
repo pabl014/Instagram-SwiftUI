@@ -33,7 +33,7 @@ final class UploadPostViewModel: ObservableObject {
         
         guard let uiImage = UIImage(data: data) else { return }
         
-        postImage = Image(uiImage: uiImage)
+        self.postImage = Image(uiImage: uiImage)
         
     }
     
