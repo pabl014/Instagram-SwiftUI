@@ -16,7 +16,7 @@ struct CompleteSignUpView: View {
             
             Spacer()
             
-            Text("Welcome to Instagram, twoja.stara1123324")
+            Text("Welcome to Instagram, \(viewModel.username)")
                 .font(.title2)
                 .fontWeight(.bold)
                 .padding(.top)
