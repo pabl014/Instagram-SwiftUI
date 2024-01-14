@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FEBBEF352B541AF6009535ED /* RegistrationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBBEF342B541AF6009535ED /* RegistrationViewModel.swift */; };
 		FEDA1B2A2B500AB800E688B1 /* InstagramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEDA1B292B500AB800E688B1 /* InstagramApp.swift */; };
 		FEDA1B2E2B500AB900E688B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDA1B2D2B500AB900E688B1 /* Assets.xcassets */; };
 		FEDA1B312B500AB900E688B1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEDA1B302B500AB900E688B1 /* Preview Assets.xcassets */; };
@@ -63,6 +64,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FEBBEF342B541AF6009535ED /* RegistrationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewModel.swift; sourceTree = "<group>"; };
 		FEDA1B262B500AB800E688B1 /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDA1B292B500AB800E688B1 /* InstagramApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstagramApp.swift; sourceTree = "<group>"; };
 		FEDA1B2D2B500AB900E688B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -130,6 +132,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FEBBEF332B541AAB009535ED /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FEBBEF342B541AF6009535ED /* RegistrationViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		FEDA1B1D2B500AB800E688B1 = {
 			isa = PBXGroup;
 			children = (
@@ -218,8 +228,9 @@
 		FEDA1B3C2B500CE200E688B1 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
-				FEDA1BA52B5319E200E688B1 /* Service */,
 				FEDA1BA42B5319BC00E688B1 /* View */,
+				FEBBEF332B541AAB009535ED /* ViewModel */,
+				FEDA1BA52B5319E200E688B1 /* Service */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -439,6 +450,7 @@
 				FEDA1B682B52D20600E688B1 /* UploadPostView.swift in Sources */,
 				FEDA1B5A2B509BA700E688B1 /* PasswordView.swift in Sources */,
 				FEDA1BAD2B53272300E688B1 /* ContentViewModel.swift in Sources */,
+				FEBBEF352B541AF6009535ED /* RegistrationViewModel.swift in Sources */,
 				FEDA1BA92B53267000E688B1 /* ContentView.swift in Sources */,
 				FEDA1B5C2B509DC900E688B1 /* CompleteSignUpView.swift in Sources */,
 				FEDA1B622B51AB5B00E688B1 /* Post.swift in Sources */,
