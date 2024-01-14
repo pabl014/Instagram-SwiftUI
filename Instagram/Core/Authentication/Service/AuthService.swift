@@ -21,10 +21,17 @@ class AuthService {
         self.userSession = Auth.auth().currentUser // code from firebase -> it's going to perform some sort of check to see if we have a user logged in to our app
     }
     
+    @MainActor
     func login(withEmail email: String, password: String) async throws {
-        
+        do {
+            let result = try await Auth.auth().signIn(withEmail: email, password: password)
+            self.userSession = result.user
+        } catch {
+            print("DEBUG: Failed to log in with error: \(error.localizedDescription)")
+        }
     }
     
+    @MainActor
     func createUser(email: String, password: String, username: String) async throws {
 //        print("Email is: \(email)")
 //        print("Password is: \(password)")
@@ -43,6 +50,7 @@ class AuthService {
     }
     
     func signout() {
-        
+        try? Auth.auth().signOut()
+        self.userSession = nil
     }
 }
