@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 struct User: Identifiable, Hashable, Codable {
     
@@ -15,6 +16,12 @@ struct User: Identifiable, Hashable, Codable {
     var fullname: String?
     var bio: String?
     let email: String
+    
+    var isCurrentUser: Bool {
+        guard let currentUid = Auth.auth().currentUser?.uid else { return false } // Let's look at the currently logged in user's id, if there isn't one return false.
+        return currentUid == id                // If the current user id is equal to that id then we know it is the current user,
+                                               // that we're logged in as.
+    }
     
 }
 
