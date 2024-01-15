@@ -25,7 +25,7 @@ struct PasswordView: View {
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 24)
             
-            SecureField("Email", text: $viewModel.password)
+            SecureField("Password", text: $viewModel.password)
                 .textInputAutocapitalization(.none)
                 .modifier(IGTextFieldModifier())
                 .padding(.top)
