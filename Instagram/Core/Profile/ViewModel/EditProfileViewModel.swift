@@ -30,6 +30,15 @@ final class EditProfileViewModel: ObservableObject {
     
     init(user: User) {
         self.user = user
+        
+        // if the user has a fullname or bio update properties in line 17 & 18
+        if let fullname = user.fullname {
+            self.fullname = fullname
+        }
+        
+        if let bio = user.bio {
+            self.bio = bio
+        }
     }
     
     // looking at item we selected at photopicker
@@ -54,7 +63,7 @@ final class EditProfileViewModel: ObservableObject {
         var data = [String: Any]()
         
         if let uiImage {
-            let imageUrl = try await ImageUploader.uploadImage(image: uiImage)
+            let imageUrl = try? await ImageUploader.uploadImage(image: uiImage)
             data["profileImageUrl"] = imageUrl
         }
         

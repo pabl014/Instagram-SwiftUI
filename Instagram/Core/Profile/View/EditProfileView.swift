@@ -54,6 +54,7 @@ struct EditProfileView: View {
                 VStack {
                     
                     if let image = viewModel.profileImage {
+                        
                         image
                             .resizable()
                             .foregroundStyle(.white)
@@ -61,12 +62,7 @@ struct EditProfileView: View {
                             .clipShape(Circle())
                             .frame(width: 80, height: 80)
                     } else {
-                        Image(systemName: "person")
-                            .resizable()
-                            .foregroundStyle(.white)
-                            .background(.gray)
-                            .clipShape(Circle())
-                            .frame(width: 80, height: 80)
+                        CircularProfileImageView(user: viewModel.user, size: .large)
                     }
                     Text("Edit profile picture")
                         .font(.footnote)
