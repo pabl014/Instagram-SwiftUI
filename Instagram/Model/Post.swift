@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 struct Post: Identifiable, Hashable, Codable { // Hashable to make things navigatable (ex. we need .navigationDestination)
     
@@ -14,7 +15,7 @@ struct Post: Identifiable, Hashable, Codable { // Hashable to make things naviga
     let caption: String
     var likes: Int
     let imageUrl: String
-    let timestamp: Date
+    let timestamp: Timestamp // Firebase does not support Date()
     var user: User?
     
 }
@@ -26,7 +27,7 @@ extension Post {
               caption: "Micheal scott on the photo",
               likes: 125,
               imageUrl: "michael-shock", 
-              timestamp: Date(),
+              timestamp: Timestamp(),
               user: User.MOCK_USERS[3]),
     
         .init(id: NSUUID().uuidString,
@@ -34,7 +35,7 @@ extension Post {
               caption: "Najlepszy napastnik z Polski",
               likes: 1456,
               imageUrl: "tomasz-frankowski",
-              timestamp: Date(),
+              timestamp: Timestamp(),
               user: User.MOCK_USERS[0]),
         
         .init(id: NSUUID().uuidString,
@@ -42,7 +43,7 @@ extension Post {
               caption: "Pozdrowienia dla wszystkich twitterowych hejterow",
               likes: 12534,
               imageUrl: "macias",
-              timestamp: Date(),
+              timestamp: Timestamp(),
               user: User.MOCK_USERS[2]),
         
         .init(id: NSUUID().uuidString,
@@ -50,7 +51,7 @@ extension Post {
               caption: "Ufam temu panu bardzo mocno",
               likes: 125,
               imageUrl: "donaldinho",
-              timestamp: Date(),
+              timestamp: Timestamp(),
               user: User.MOCK_USERS[4]),
         
         .init(id: NSUUID().uuidString,
@@ -58,7 +59,7 @@ extension Post {
               caption: "siema szwagier a co ty tu kurcze robisz",
               likes: 125,
               imageUrl: "szwagier",
-              timestamp: Date(),
+              timestamp: Timestamp(),
               user: User.MOCK_USERS[5])
     
     
