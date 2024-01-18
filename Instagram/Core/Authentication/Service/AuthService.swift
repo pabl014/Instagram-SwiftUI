@@ -56,9 +56,11 @@ class AuthService {
     func loadUserData() async throws {
         self.userSession = Auth.auth().currentUser // code from firebase -> it's going to perform some sort of check to see if we have a user logged in to our app
         guard let currentUid = userSession?.uid else { return }                                               // fetching current user identifier
-        let snapshot = try await Firestore.firestore().collection("users").document(currentUid).getDocument() // get data of user from firebase
-        //print("DEBUG: Snapshot data is: \(snapshot.data())")
-        self.currentUser = try? snapshot.data(as: User.self)                                                  // decode the data
+//        let snapshot = try await Firestore.firestore().collection("users").document(currentUid).getDocument() // get data of user from firebase
+//        //print("DEBUG: Snapshot data is: \(snapshot.data())")
+//        self.currentUser = try? snapshot.data(as: User.self)                                                  // decode the data
+//      MOVED COMMENTED LITES TO UserService.swift
+        self.currentUser = try await UserService.fetchUser(withUid: currentUid)
     }
     
     func signout() {
