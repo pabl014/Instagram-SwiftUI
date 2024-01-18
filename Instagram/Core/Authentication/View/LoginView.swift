@@ -33,17 +33,17 @@ struct LoginView: View {
                         .modifier(IGTextFieldModifier())
                 }
                 
-                // forgot password:
-                Button {
-                    print("show forgot password")
-                } label: {
-                    Text("Forgot password?")
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-                        .padding(.top)
-                        .padding(.trailing, 28)
-                }
-                .frame(maxWidth: .infinity, alignment: .trailing)
+//                // forgot password:
+//                Button {
+//                    print("show forgot password")
+//                } label: {
+//                    Text("Forgot password?")
+//                        .font(.footnote)
+//                        .fontWeight(.semibold)
+//                        .padding(.top)
+//                        .padding(.trailing, 28)
+//                }
+//                .frame(maxWidth: .infinity, alignment: .trailing)
                 
                 // log in:
                 Button {
@@ -61,33 +61,33 @@ struct LoginView: View {
                 }
                 .padding(.vertical)
                 
-                // OR
-                HStack {
-                    Rectangle()
-                        .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
-                    
-                    Text("OR")
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-                    
-                    Rectangle()
-                        .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
-                }
-                .tint(.gray)
-                
-                // facebook
-                HStack {
-                    Image("fb-logo")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 20, height: 20)
-                    
-                    Text("Continue with facebook")
-                        .font(.footnote)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.blue)
-                }
-                .padding(.top, 8)
+//                // OR
+//                HStack {
+//                    Rectangle()
+//                        .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
+//                    
+//                    Text("OR")
+//                        .font(.footnote)
+//                        .fontWeight(.semibold)
+//                    
+//                    Rectangle()
+//                        .frame(width: (UIScreen.main.bounds.width / 2) - 40, height: 0.5)
+//                }
+//                .tint(.gray)
+//                
+//                // facebook
+//                HStack {
+//                    Image("fb-logo")
+//                        .resizable()
+//                        .scaledToFit()
+//                        .frame(width: 20, height: 20)
+//                    
+//                    Text("Continue with facebook")
+//                        .font(.footnote)
+//                        .fontWeight(.semibold)
+//                        .foregroundStyle(.blue)
+//                }
+//                .padding(.top, 8)
                 
                 Spacer()
                 

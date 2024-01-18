@@ -32,7 +32,7 @@ struct CurrentUserProfileView: View {
                     Button {
                         AuthService.shared.signout()
                     } label: {
-                        Image(systemName: "line.3.horizontal")
+                        Image(systemName: "rectangle.portrait.and.arrow.right")
                             .tint(.black)
                     }
                 }
@@ -42,5 +42,5 @@ struct CurrentUserProfileView: View {
 }
 
 #Preview {
-    CurrentUserProfileView(user: User.MOCK_USERS[2])
+    CurrentUserProfileView(user: User.MOCK_USERS[3])
 }

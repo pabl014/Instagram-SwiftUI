@@ -14,18 +14,19 @@ struct UserStatView: View {
     
     var body: some View {
         
-        VStack {
+        HStack {
             Text("\(value)")
-                .font(.subheadline)
+                .font(.title)
                 .fontWeight(.semibold)
             
             Text(title)
+                .font(.title)
                 .font(.footnote)
         }
-        .frame(width: 76)
+        .frame(width: 100)
     }
 }
 
 #Preview {
-    UserStatView(value: 7, title: "Followers")
+    UserStatView(value: 7, title: "Posts")
 }

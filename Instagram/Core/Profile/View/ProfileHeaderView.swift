@@ -11,7 +11,7 @@ struct ProfileHeaderView: View {
     
     let user: User
     @State private var showEditProfile = false
-    
+    @State private var postCount = 0
     var body: some View {
         VStack(spacing: 10) {
             // profile picture and stats
@@ -21,9 +21,11 @@ struct ProfileHeaderView: View {
                 Spacer()
                 
                 HStack(spacing: 8) {
-                    UserStatView(value: 3, title: "Posts")
-                    UserStatView(value: 5, title: "Followers")
-                    UserStatView(value: 7, title: "Following")
+                    Spacer()
+                    UserStatView(value: postCount, title: "Posts")
+                    Spacer()
+//                    UserStatView(value: 5, title: "Followers")
+//                    UserStatView(value: 7, title: "Following")
                 }
             }
             .padding(.horizontal)
@@ -65,6 +67,12 @@ struct ProfileHeaderView: View {
             })
             
             Divider()
+        }
+        .onAppear {
+            Task {
+                let posts = try await PostService.fetchUserPosts(uid: user.id)
+                postCount = posts.count
+            }
         }
         .fullScreenCover(isPresented: $showEditProfile, content: {
             EditProfileView(user: user)

@@ -35,4 +35,10 @@ struct PostService {
         let snapshot = try await postsCollection.whereField("ownerUid", isEqualTo: uid).getDocuments()
         return try snapshot.documents.compactMap({ try $0.data(as: Post.self) })
     }
+    
+    
+//    static func countUserPosts(uid: String) async throws -> Int {
+//        return try await postsCollection.whereField("ownerUid", isEqualTo: uid).getDocuments().count
+//    }
+    
 }

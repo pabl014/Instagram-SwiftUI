@@ -32,17 +32,17 @@ struct MainTabView: View {
                 }
                 .tabItem { Image(systemName: "plus.app") }.tag(2)
             
-            Text("Notifications")
-                .onAppear {
-                    selectedIndex = 3
-                }
-                .tabItem { Image(systemName: "heart.fill") }.tag(3)
+//            Text("Notifications")
+//                .onAppear {
+//                    selectedIndex = 3
+//                }
+//                .tabItem { Image(systemName: "heart.fill") }.tag(3)
             
             CurrentUserProfileView(user: user)
                 .onAppear {
-                    selectedIndex = 4
+                    selectedIndex = 3
                 }
-                .tabItem { Image(systemName: "person.fill") }.tag(4)
+                .tabItem { Image(systemName: "person.fill") }.tag(3)
         }
         .tint(.black)
     }

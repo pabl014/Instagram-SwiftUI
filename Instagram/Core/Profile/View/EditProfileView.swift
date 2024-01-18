@@ -38,6 +38,7 @@ struct EditProfileView: View {
                     Button {
                         Task {
                             try await viewModel.updateUserData()
+                            dismiss()
                         }
                     } label: {
                         Text("Done")

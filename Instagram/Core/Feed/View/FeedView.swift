@@ -31,11 +31,7 @@ struct FeedView: View {
                         .frame(width: 100, height: 32)
                 }
                 
-                ToolbarItem(placement: .navigationBarTrailing) {
-                  Image(systemName: "paperplane")
-                        .imageScale(.large)
-                       
-                }
+               
             }
         }
     }
