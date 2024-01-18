@@ -22,7 +22,7 @@ struct CurrentUserProfileView: View {
                     // Header:
                     ProfileHeaderView(user: user)
                     // Post grid view
-                    PostGridView(posts: posts)
+                    PostGridView(user: user)
                 }
             }
             .navigationTitle("Profile")
